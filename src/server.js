@@ -4,6 +4,7 @@ import { logger } from './middleware/logger.js';
 import cors from 'cors';
 
 import { notFoundHandler } from './middleware/notFoundHandler.js';
+import { errors } from 'celebrate';
 import { errorHandler } from './middleware/errorHandler.js';
 import { connectMongoDB } from './db/connectMongoDB.js';
 
@@ -19,6 +20,7 @@ app.use(cors());
 app.use(NotesRoutes);
 
 app.use(notFoundHandler);
+app.use(errors());
 app.use(errorHandler);
 
 await connectMongoDB();
