@@ -11,6 +11,7 @@ import { connectMongoDB } from './db/connectMongoDB.js';
 
 import authRoutes from './routes/authRoutes.js';
 import NotesRoutes from './routes/notesRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 
 const PORT = process.env.PORT ?? 3000;
 const app = express();
@@ -22,6 +23,7 @@ app.use(cookieParser());
 
 app.use(authRoutes);
 app.use(NotesRoutes);
+app.use(userRoutes);
 
 app.use(notFoundHandler);
 app.use(errors());
