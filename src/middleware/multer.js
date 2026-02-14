@@ -8,7 +8,7 @@ export const upload = multer({
       'image/jpeg',
       'image/jpg',
       'image/png',
-      'image/git',
+      'image/gif',
       'image/webp',
     ];
 

@@ -14,7 +14,7 @@ export async function saveFileToCloudinary(buffer, userId) {
       {
         folder: 'notes-app/avatars',
         resource_type: 'image',
-        public_id: `avatar-${userId}`,
+        public_id: 'avatar-777',
         overwrite: true,
         unique_filename: false,
       },
